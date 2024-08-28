@@ -1,0 +1,21 @@
+sudo cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
+sudo cat /sys/kernel/debug/clk/gbus/clk_possible_rates
+
+# ---this may change depending on kernel source, but .. At the moment...
+# Scaling_max 
+# use 102000 204000 307200 403200 518400 614400 710400 825600 921600 1036800 
+#     1132800 1224000 1326000 1428000 1479000 1530000 1632000 1734000 
+#     1836000 1912500 2014500 
+# GPU max_freq
+# use 76800 153600 230400 307200 384000 460800 537600 614400 691200 768000 844800 921600 998400
+
+
+
+# if first list ends in 1479000 then it is NOT using Overclock kernel
+# if second list ends in 921600 the it is NOT using Overclock kernel
+# ------------------------------------------------------------------
+# if first list ends in 2014500 (2Ghz) then OVERCLOCK Kernel is loaded (CPU)
+# if second list ends in 998400 then OVERCLOCK kernel is loaded (GPU)
+
+# use overclock.sh to poke good values in there !!
+
