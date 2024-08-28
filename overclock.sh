@@ -1,5 +1,12 @@
 #!/bin/bash
-
+# -----
+# Scaling_max (kHz) 
+# use 102000 204000 307200 403200 518400 614400 710400 825600 921600 1036800 
+#     1132800 1224000 1326000 1428000 1479000 1530000 1632000 1734000 
+#     1836000 1912500 2014500 
+# GPU max_freq (Hz)
+# use 76800 153600 230400 307200 384000 460800 537600 614400 691200 768000 844800 921600 998400 
+# 
 sleep 15
-echo 1900000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
-echo 900000000 > /sys/devices/57000000.gpu/devfreq/57000000.gpu/max_freq
+echo 1912500 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+echo 950000000 > /sys/devices/57000000.gpu/devfreq/57000000.gpu/max_freq
